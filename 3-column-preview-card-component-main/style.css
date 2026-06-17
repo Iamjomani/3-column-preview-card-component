@@ -1,0 +1,119 @@
+:root{
+    --gold-500: hsl(31, 77%, 52%);
+    --cyan-800: hsl(184, 100%, 22%);
+    --green-950:hsl(179, 100%, 13%);
+
+    --trans-pg-white:hsla(0, 0%, 100%, 0.75);
+    --gray-bg-100:hsl(0, 0%, 95%);
+
+    --body: "Lexend Deca", sans-serif;
+    --title: "Big Shoulders", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-wrapper{
+    width: min(90%, 58rem);
+    margin: 3rem auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+.sedans{
+    background: var(--gold-500);
+}
+
+.suv{
+    background: var(--cyan-800);
+}
+
+.luxury{
+    background: var(--green-950);
+}
+
+.title{
+    color: var(--trans-pg-white);
+    font-family: var(--title);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.description{
+    color: var(--trans-pg-white);
+    font-size: 1rem;
+    font-family: var(--body);
+    max-width: 25ch;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    opacity: 0.8;
+}
+
+.cta{
+    text-decoration: none;
+    background: var(--trans-pg-white);
+    padding: 0.8rem 1.6rem;
+    align-self: flex-start;
+    border-radius: 3rem;
+    text-transform: capitalize;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    border: 2px solid transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta:hover{
+    background: transparent;
+    border: 2px solid var(--trans-pg-white);
+}
+
+.sedans .cta{
+    color: var(--gold-500);
+}
+
+.suv .cta{
+    color: var(--cyan-800);
+}
+
+.luxury .cta:hover, .suv .cta:hover, .sedans .cta:hover {
+    color: var(--trans-pg-white);
+}
+
+.luxury .cta{
+    color: var(--green-950);
+}
+
+
+
+
+@media(min-width:48rem){
+    .card-wrapper{
+        flex-direction: row;
+    }
+
+    .description{
+        margin-bottom: 4rem;
+    }
+}
+
+
